@@ -32,20 +32,17 @@ namespace Talabat.Repository
         public async Task<T> GetByIdAsync(int id)
         {
             return await _context.Set<T>().FindAsync(id);
-            //return await _context.Set<T>().Where(P => P.id == id).Include(P => P.ProductBrand).Include(P => P.ProductType) ;
         }
         #endregion
 
         #region With Specifications
         public async Task<IReadOnlyList<T>> GetAllWithSpecAsync(ISpecifications<T> Spec)
         {
-            //return await SpecificationsEvalutor<T>.GetQuery(_context.Set<T>(), Spec).ToListAsync();
             return await ApplySpecification(Spec).ToListAsync();
         }
 
         public async Task<T> GetByEntityWithSpecAsync(ISpecifications<T> Spec)
         {
-            //return await SpecificationsEvalutor<T>.GetQuery(_context.Set<T>(), Spec).FirstOrDefaultAsync();
             return await ApplySpecification(Spec).FirstOrDefaultAsync();
         }
         public async Task<int> GetCountWithSpecAsync(ISpecifications<T> Spec)
