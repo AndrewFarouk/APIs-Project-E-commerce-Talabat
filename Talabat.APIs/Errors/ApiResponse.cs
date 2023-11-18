@@ -13,12 +13,6 @@
 
         private string? GetDefaultMessageForStatusCode(int? statusCode)
         {
-            // 500 => Internal Server Error
-            // 400 => Bad Request
-            // 401 => Unathorized
-            // 404 => Not Found
-
-            // C# 7
             return StatusCode switch
             {
                 400 => "Bad Request",
