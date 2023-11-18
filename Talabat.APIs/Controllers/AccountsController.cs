@@ -123,12 +123,6 @@ namespace Talabat.APIs.Controllers
         [HttpGet("emailExists")]
         public async Task<ActionResult<bool>> CheckEmailExists(string email)
         {
-            //var user = await _userManager.FindByEmailAsync(email);
-            //if (user is null)
-            //    return false;
-            //else
-            //    return true;
-
             return await _userManager.FindByEmailAsync(email) is not null; 
         }
     }
