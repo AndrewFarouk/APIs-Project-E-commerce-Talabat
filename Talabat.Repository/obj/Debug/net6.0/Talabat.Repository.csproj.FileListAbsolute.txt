@@ -1,0 +1,15 @@
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\bin\Debug\net6.0\Talabat.Repository.deps.json
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\bin\Debug\net6.0\Talabat.Repository.dll
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\bin\Debug\net6.0\Talabat.Repository.pdb
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\bin\Debug\net6.0\Talabat.Core.dll
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\bin\Debug\net6.0\Talabat.Core.pdb
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\Talabat.Repository.csproj.AssemblyReference.cache
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\Talabat.Repository.GeneratedMSBuildEditorConfig.editorconfig
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\Talabat.Repository.AssemblyInfoInputs.cache
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\Talabat.Repository.AssemblyInfo.cs
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\Talabat.Repository.csproj.CoreCompileInputs.cache
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\Talabat.Repository.csproj.CopyComplete
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\Talabat.Repository.dll
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\refint\Talabat.Repository.dll
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\Talabat.Repository.pdb
+D:\Andrew\ASP.Net Backend_Course\8-API\Talabat.Solution\Talabat.Repository\obj\Debug\net6.0\ref\Talabat.Repository.dll
