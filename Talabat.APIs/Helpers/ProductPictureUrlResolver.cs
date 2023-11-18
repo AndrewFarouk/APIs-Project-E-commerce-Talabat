@@ -12,6 +12,7 @@ namespace Talabat.APIs.Helpers
         {
             _configuration = configuration;
         }
+        
         public string Resolve(Product source, ProductToReturnDto destination, string destMember, ResolutionContext context)
         {
             if (!string.IsNullOrEmpty(source.PictureUrl)) // if find Photo
