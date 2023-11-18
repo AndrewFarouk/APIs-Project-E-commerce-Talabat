@@ -21,14 +21,12 @@ namespace Talabat.Core.Specifications
         // Get ALL
         public BaseSpecifications()
         {
-            //Includes = new List<Expression<Func<T, object>>>();
         }
 
         // Get By Id
         public BaseSpecifications(Expression<Func<T, bool>> criteriaExpression)
         {
             Criteria = criteriaExpression;
-           // Includes = new List<Expression<Func<T, object>>>();
         }
 
         public void AddOrderBy(Expression<Func<T, object>> OrderByExpression)
