@@ -18,43 +18,24 @@ namespace Talabat.APIs.Controllers
     public class ProductsController : APIBaseController
     {
         private readonly IUnitOfWork _unitOfWork;
-
-        // private readonly IGenericRepository<Product> _productRepo;
         private readonly IMapper _mapper;
-       // private readonly IGenericRepository<ProductType> _typeRepo;
-        //private readonly IGenericRepository<ProductBrand> _brandRepo;
 
-        public ProductsController(//IGenericRepository<Product> ProductRepo,
-            IUnitOfWork unitOfWork,
-            IMapper mapper
-           // IGenericRepository<ProductType> TypeRepo,
-            //IGenericRepository<ProductBrand> BrandRepo
-            )
+        public ProductsController(IUnitOfWork unitOfWork,
+                                IMapper mapper)
         {
             _unitOfWork = unitOfWork;
-            //_productRepo = ProductRepo;
             _mapper = mapper;
-           // _typeRepo = TypeRepo;
-           // _brandRepo = BrandRepo;
         }
 
         // Get All Products
         // BaseURl/Api/Products -> GET
         [CachedAttribute(300)]
         [HttpGet]
-       // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Pagination<ProductToReturnDto>>> GetProducts([FromQuery]ProductSpecParams Params)
         {
             var Spec = new ProductWithBrandAndTypeSpecifications(Params);
             var Products = await _unitOfWork.Repository<Product>().GetAllWithSpecAsync(Spec);
             var MappedProducts = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(Products);
-            ///var ReturnedObject = new Pagination<ProductToReturnDto>()
-            ///{
-            ///    PageSize = Params.PageSize,
-            ///    PageIndex = Params.PageIndex,
-            ///    Data = MappedProducts
-            ///};
-            ///return Ok(ReturnedObject);
             var CountSpec = new ProductWithFiltrationForCountSpecfication(Params);
             var Count = await _unitOfWork.Repository<Product>().GetCountWithSpecAsync(CountSpec);
             return Ok(new Pagination<ProductToReturnDto>(Params.PageSize, Params.PageIndex, Count, MappedProducts));

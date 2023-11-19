@@ -11,9 +11,9 @@ namespace Talabat.Core.Entities.Order_Aggregate
     public class Address
     {
         public Address()
-        {
-            
+        {  
         }
+        
         public Address(string firstName, string lastName, string street, string city, string country)
         {
             FirstName = firstName;
@@ -22,6 +22,7 @@ namespace Talabat.Core.Entities.Order_Aggregate
             City = city;
             Country = country;
         }
+        
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Street { get; set; }

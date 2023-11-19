@@ -30,16 +30,6 @@ namespace Talabat.APIs.Middlewares
                 // Production => Log ex in Database
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-
-                //if (_environment.IsDevelopment())
-                //{
-                //    var Response = new ApiExceptionResponse(500, ex.Message, ex.StackTrace.ToString());
-                //}
-                //else
-                //{
-                //    //var Response = new ApiExceptionResponse(500);
-                //    //var Response = new ApiExceptionResponse((int)HttpStatusCode.InternalServerError);
-                //}
                 var Response = _environment.IsDevelopment() ? new ApiExceptionResponse(500, ex.Message, ex.StackTrace.ToString()) : new ApiExceptionResponse((int)HttpStatusCode.InternalServerError);
                 var Options = new JsonSerializerOptions()
                 {

@@ -25,11 +25,6 @@ namespace Talabat.APIs.Controllers
         public async Task<ActionResult<CustomerBasket>> GetCustomerBasket(string id)
         {
             var Basket = await _basketRepository.GetBasketAsync(id);
-            //if (Basket is null)
-            //    return new CustomerBasket(id);
-            //else
-            //    return Basket;
-
             return Basket is null ? new CustomerBasket(id) : Basket;
         }
 
